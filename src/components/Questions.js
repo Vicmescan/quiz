@@ -20,7 +20,7 @@ export const Questions = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      fetch(`https://api.trivia.willfry.co.uk/questions?limit=7`)
+      fetch(`https://api.trivia.willfry.co.uk/questions?limit=2`)
         .then(res => res.json())
         .then(result => {
           const all = result[0];
@@ -70,7 +70,7 @@ export const Questions = () => {
         } else {
             nextQuest(e)
         }
-      },2000)
+      },2500)
     } else {
       setSentence(`bad, it was ${correctAnswer}`)
       setMixAnswer("")
@@ -80,7 +80,7 @@ export const Questions = () => {
         } else {
             nextQuest(e)
         }  
-      }, 2000);
+      }, 3000);
     }
   }
 
@@ -88,6 +88,9 @@ export const Questions = () => {
 
   let finish = (x) => {
     alert(`Finish, your score this time is ${points + x} points`)
+    if (localStorage.getItem('maxScore') < points + x) {
+      localStorage.setItem('maxScore', points + x)
+    }
     if (window.confirm("Do you want to play again?")) {
       window.location.reload(false);
     } else {
@@ -97,8 +100,8 @@ export const Questions = () => {
 
   return (
 
-    <div className="questionCard" >
-      <Card className="text-center">
+    <Container className="vh-80 ms-auto" >
+      <Card className="text-center justify-content-center">
         <Card.Header>Question: {counter + 1}, Points: {points} </Card.Header>
         <Card.Body>
           <Card.Title>{category}</Card.Title>
@@ -109,22 +112,22 @@ export const Questions = () => {
             <Row className="justify-content-md-center">
               <Col md="auto">
                 <ButtonGroup className="m-1" >
-                  <Button className="button" id="0" size="xxl" onClick={(e) => prove(e)} >1- {mixAnswer[0]} </Button>
+                  <Button className="button" id="0" size="xxl" onClick={(e) => prove(e)} >| {mixAnswer[0]} |</Button>
                 </ButtonGroup>
               </Col>
               <Col md="auto">
                 <ButtonGroup className="m-1" >
-                  <Button className="button" id="1" size="xxl" onClick={(e) => prove(e)} >2- {mixAnswer[1]} </Button>
+                  <Button className="button" id="1" size="xxl" onClick={(e) => prove(e)} >| {mixAnswer[1]} |</Button>
                 </ButtonGroup>
               </Col>
               <Col md="auto">
                 <ButtonGroup className="m-1" >
-                  <Button className="button" id="2" size="xxl" onClick={(e) => prove(e)} >3- {mixAnswer[2]} </Button>
+                  <Button className="button" id="2" size="xxl" onClick={(e) => prove(e)} >| {mixAnswer[2]} |</Button>
                 </ButtonGroup>
               </Col>
               <Col md="auto">
                 <ButtonGroup className="m-1" >
-                  <Button className="button" id="3" size="xxl" onClick={(e) => prove(e)} >4- {mixAnswer[3]} </Button>
+                  <Button className="button" id="3" size="xxl" onClick={(e) => prove(e)} >| {mixAnswer[3]} |</Button>
                 </ButtonGroup>
               </Col>
             </Row>
@@ -132,6 +135,6 @@ export const Questions = () => {
         </Card.Body>
         <Card.Footer ><h4>{sentence}</h4></Card.Footer>
       </Card>
-    </div>
+    </Container>
   )
 };
