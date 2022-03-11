@@ -6,7 +6,7 @@ import { Weather } from './Weather';
 
 export const Footer = () => {
   return (
-    <Navbar bg="secondary" expand="xl" fixed='bottom' >
+    <Navbar bg="info" expand="xl" fixed='bottom' >
     <Container>
         <Navbar.Brand href="https://github.com/Vicmescan" target="blank" >By VMC</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

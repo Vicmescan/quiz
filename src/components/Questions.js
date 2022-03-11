@@ -20,7 +20,7 @@ export const Questions = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      fetch(`https://api.trivia.willfry.co.uk/questions?limit=2`)
+      fetch(`https://api.trivia.willfry.co.uk/questions?limit=10`)
         .then(res => res.json())
         .then(result => {
           const all = result[0];
@@ -100,7 +100,7 @@ export const Questions = () => {
 
   return (
 
-    <Container className="vh-80 ms-auto" >
+    <Container className="vh-80 mt-5" >
       <Card className="text-center justify-content-center">
         <Card.Header>Question: {counter + 1}, Points: {points} </Card.Header>
         <Card.Body>
@@ -112,7 +112,7 @@ export const Questions = () => {
             <Row className="justify-content-md-center">
               <Col md="auto">
                 <ButtonGroup className="m-1" >
-                  <Button className="button" id="0" size="xxl" onClick={(e) => prove(e)} >| {mixAnswer[0]} |</Button>
+                  <Button className="button" id="0" size="xxl" onClick={(e) => prove(e)}  >| {mixAnswer[0]} |</Button>
                 </ButtonGroup>
               </Col>
               <Col md="auto">
