@@ -22,8 +22,8 @@ export const About = () => {
             Víctor Mestre Canto. 
           </Card.Text>
           <Card.Text>
-            <a href="https://github.com/Vicmescan" target="_blank"><AiFillGithub style={{color: 'black', fontSize: '50px'}} /></a>
-            <a href="https://www.linkedin.com/in/v%C3%ADctor-mestre-canto-b68a58230/" target="_blank"><BsLinkedin style={{color: 'black', fontSize: '50px', marginLeft: "1rem" }} /></a>
+            <a href="https://github.com/Vicmescan" target="_blank" rel="noreferrer" ><AiFillGithub style={{color: 'black', fontSize: '50px'}} /></a>
+            <a href="https://www.linkedin.com/in/v%C3%ADctor-mestre-canto-b68a58230/" target="_blank" rel="noreferrer" ><BsLinkedin style={{color: 'black', fontSize: '50px', marginLeft: "1rem" }} /></a>
           </Card.Text>
         </Card.Body>
       </Card>
