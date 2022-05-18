@@ -16,23 +16,17 @@ export const Weather = () => {
             navigator.geolocation.getCurrentPosition(function(position) {
                 setLat(position.coords.latitude);
                 setLong(position.coords.longitude);
-                // console.log(lat)
-                // console.log(long)
             });
             
             await fetch(`${REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${APIKEY}`)
             .then(res => res.json())
             .then(result => {
-                setData(result)
-                // console.log(result)              
-            });
-            
+                setData(result)            
+            });            
         }
         fetchData();
     }, [lat,long])
     
-    
-
     return (
         <div className='weather'>
             {(typeof data.main != 'undefined') ? (
@@ -43,7 +37,6 @@ export const Weather = () => {
             ): (
             <div></div>
         )}
-
         </div>
     );
 
