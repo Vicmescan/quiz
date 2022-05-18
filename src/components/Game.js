@@ -1,5 +1,4 @@
 import React from 'react';
-import { Footer } from './Footer';
 import { Header } from './Header';
 import { Questions } from './Questions';
 
@@ -10,7 +9,6 @@ export const Game = () => {
     <div>
         <Header /> 
         <Questions />
-        <Footer />
     </div>
     
   )
