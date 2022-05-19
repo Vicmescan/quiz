@@ -133,7 +133,7 @@ export const Questions = () => {
     <Container className="vh-80 mt-5" >
       <FinishModal show={show} setShow={setShow} points={points} />
       <Card className="text-center justify-content-center">
-        <Card.Header>Question: {counter + 1}, Points: {points} </Card.Header>
+        <Card.Header>Question: {counter + 1} / 10, Points: {points} </Card.Header>
         <Card.Body>
           <Card.Title>{category}</Card.Title>
           <Card.Text>{question}</Card.Text>
