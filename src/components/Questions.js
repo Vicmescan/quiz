@@ -59,9 +59,6 @@ export const Questions = () => {
     fetchData()
   }, []);
 
-  console.log(data);
-
-
   let nextQuest = (e) => {
     e.preventDefault();
     // add one to the counter and define the next question
@@ -119,8 +116,8 @@ export const Questions = () => {
   let finish = (x) => {
     setPoints(points + x)
     // if your score is higher than the highscore, it will be the new highscore setting in local storage
-    if (localStorage.getItem('maxScore') < points) {
-      localStorage.setItem('maxScore', points)
+    if (localStorage.getItem('maxScore') < points + x) {
+      localStorage.setItem('maxScore', points + x)
     }
     // ask for another game if the answer is not, got back to the home page
     setShow(true);
@@ -133,7 +130,7 @@ export const Questions = () => {
     <Container className="vh-80 mt-5" >
       <FinishModal show={show} setShow={setShow} points={points} />
       <Card className="text-center justify-content-center">
-        <Card.Header>Question: {counter + 1} / 10, Points: {points} </Card.Header>
+        <Card.Header>Question: {counter + 1}/10, Points: {points} </Card.Header>
         <Card.Body>
           <Card.Title>{category}</Card.Title>
           <Card.Text>{question}</Card.Text>
