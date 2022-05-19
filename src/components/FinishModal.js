@@ -29,7 +29,7 @@ export const FinishModal = ({ show, setShow, points }) => {
           <Button variant="secondary" onClick={() => window.location.reload()}>
             Accept
           </Button>
-          <Button variant="primary" onClick={() => navigate('./about')}>
+          <Button variant="primary" onClick={() => navigate('/about')}>
             Close
           </Button>
         </Modal.Footer>
