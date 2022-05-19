@@ -13,7 +13,8 @@ export const Loading = () => {
     return (
         <>
             <div className='loading'>
-                <Spinner animation="border" variant="dark" style={{ margin: "80vh 0 0 49vw" }} />
+                <h1 style={{ color:"Black"}}>Mmmmmm...</h1>
+                <Spinner animation="border" variant="dark" style={{ margin: "50vh 0 0 49vw" }} />
             </div>
 
         </>

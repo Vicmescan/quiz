@@ -29,11 +29,11 @@
 .loading {
   width: 100vw;
   height: 100vh;
-  background-image: url(./components/images/loadingImg-freepik-.jpg);
+  background-image: url(./components/images/loadingPic-freepik-.jpg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #282c34;
+  background-color: #f7f7f7;
   filter: brightness(50%)
   
 }
