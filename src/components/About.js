@@ -16,7 +16,7 @@ export const About = () => {
         <Card.Body>
           <Card.Title variant="secundary"> Special thanks to: </Card.Title>
           <Card.Text>
-            I created this App as a final project of the React module. I want to thank "https://the-trivia-api.com/" and the API "openweathermap" without which it would have been impossible to do this project, as well as the team of teachers of Digital Career Institute.
+            I created this App as a final project of the React module. I want to thank to <a href='https://www.freepik.es/fotos/mujer-pensativa'>"www.freepik.es"</a>, <a href="https://the-trivia-api.com" >"the-trivia-api"</a> and the API <a href="https://openweathermap.org/api">"openweathermap"</a> without which it would have been impossible to do this project, as well as the team of teachers of Digital Career Institute.
           </Card.Text>
           <Card.Text>
             Víctor Mestre Canto. 

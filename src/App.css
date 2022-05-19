@@ -25,3 +25,15 @@
 #questionContainer {
   margin-top:auto
 }
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./components/images/loadingImg-freepik-.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #282c34;
+  filter: brightness(50%)
+  
+}
