@@ -1,5 +1,7 @@
 # Vic Quiz
 
+<img src="./src/components/images/Screenshot from 2022-05-25 14-34-54.png" alt="app image" >
+
 This is an application that I originally created as a project for the React module in the course of a year at the Digital Career Institute.
 
 In it I have used a free question Api: <a href="https://the-trivia-api.com" >"the-trivia-api"</a> and also, although unnecessarily, I have used a free API of the weather in the region where the device is located: <a href="https://openweathermap.org/api">"openweathermap"</a>.
