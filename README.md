@@ -1,5 +1,6 @@
 # Vic Quiz
 
+<a href="https://vicmescan.github.io/quiz/" target="_blank" rel="noreferrer">https://vicmescan.github.io/quiz/</a>
 <img src="./src/components/images/Screenshot from 2022-05-25 14-34-54.png" alt="app image" >
 
 This is an application that I originally created as a project for the React module in the course of a year at the Digital Career Institute.
